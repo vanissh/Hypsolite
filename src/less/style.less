@@ -43,7 +43,7 @@ body {
 a:hover {
     text-decoration: none;
 }
-button, input, a {
+button, input, a, textarea{
     &:focus {
         outline: none;
     }
@@ -231,6 +231,52 @@ section {
     background-size: 70%;
 }
 
+/* Оформление модальных окон */
+.popup {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    &-content {
+        position: fixed;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        background-color: @ligth;
+        padding: 4rem 6rem;
+    }
+    &-form {
+        padding: 0;
+    }
+    &-close {
+        position: absolute;
+        top: -2rem;
+        right: -2.5rem;
+        width: 2rem;
+        text-align: center;
+        border: none;
+        background: transparent;
+        font-size: 4rem;
+        color:@ligth;
+
+    }
+    &-header {
+        .bold();
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.8rem;
+    }
+    &-content {
+        text-align: center;
+    }
+}
 @media (max-width: 991px) {
     .phone-link-wrap, .main-title {
         text-align: center;
