@@ -60,10 +60,105 @@
                   <p>Приедем в день обращения*</p>
                 </form>
               </div>
+              <small class="main-small-tag">* - выезды на замер осуществляются <br>в рабоче дни Пн-Пт с 9:00 до 18:00</small>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <section class="features">
+      <div class="container">
+        <div class="row">
+          <h2 class="section-header">
+            Преимущества работы с нами
+          </h2>
+          <div class="features-slider">
+            <div class="features-block">
+              <div class="features-img">
+                <picture>
+                <source srcset="img/features/coin.svg" type="image/">
+                <img src="img/features/coin.png" alt="Платите по факту">
+              </picture>
+              </div>
+              <h3>Платите по факту</h3>
+              <p>Вы оплачиваете выполненные <br>работы только после их выполнения. <br>Никаких скрытых доплат и <br>промежуточных платежей.</p>
+            </div>
+            <div class="features-block">
+              <div class="features-img">
+                <picture>
+                <source srcset="img/features/folder.svg" type="image/">
+                <img src="img/features/folder.png" alt="Заключаем договор">
+              </picture>
+              </div>
+              <h3>Заключаем договор</h3>
+              <p>Перед началом работ заключаем<br> договор на юридическое лицо. <br>Вы можете быть уверены, что все <br>обязательства будут выполнены.</p>
+            </div>
+            <div class="features-block">
+              <div class="features-img">
+                <picture>
+                <source srcset="img/features/clock.svg" type="image/">
+                <img src="img/features/clock.png" alt="Точно в срок">
+              </picture>
+              </div>
+              <h3>Точно в срок</h3>
+              <p>Работаем строго по установленным<br> срокам, которые прописаны <br>
+                в договоре. Если не успеваем,<br> Вы платите меньше</p>
+            </div>
+            <div class="features-block">
+              <div class="features-img">
+                <picture>
+                <source srcset="img/features/bank.svg" type="image/">
+                <img src="img/features/bank.png" alt="Экономите на материалах">
+              </picture>
+              </div>
+              <h3>Экономите на материалах</h3>
+              <p>Мы являемся структурным<br> подразделением компании поставщика<br> строительных смесей gicema.ru и даём<br> Вам самые 
+                выгодные цены.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Подключаем slick-slider -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <!-- Инициализация slick-slider -->
+  <script>
+    $(document).ready(function(){
+      $('.features-slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 2,
+        prevArrow: '<button class="prev arrow"></button>',
+        nextArrow: '<button class="next arrow"></button>',
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        prevArrow: '<button class="prev arrow" style="left: 3%"></button>',
+        nextArrow: '<button class="next arrow" style="right: 3%"></button>',
+        slidesToScroll: 1
+      }
+    }
+  ]
+      });
+    });
+  </script>
   </body>
 </html>
