@@ -76,9 +76,17 @@ section {
 }
 .section-header {
   margin: 2rem 0 10rem;
+  text-align: center;
+}
+.section-header_light {
+  color: #fff;
+}
+.section-header h2 {
   font-family: 'ProximaNova_bold', sans-serif;
   font-size: 3.6rem;
-  text-align: center;
+}
+.section-header p {
+  font-size: 1.4rem;
 }
 .main {
   padding: 3rem 0;
@@ -182,6 +190,64 @@ section {
   display: block;
   margin: 0 auto;
 }
+/* Секция с ценами */
+.price {
+  background: url(../img/prices/prices-bg.png) center repeat;
+  background-size: cover;
+}
+.price-header-btn {
+  margin-top: 1rem;
+}
+.price-button {
+  text-align: right;
+}
+.price-header-block {
+  margin-bottom: 9rem;
+}
+.price-block {
+  background: #fff;
+  text-align: center;
+  box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+  padding: 1rem 3rem;
+  min-height: 60rem;
+  color: #292929;
+}
+.price-block h4 {
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  margin: 3rem 0;
+}
+.price-block img {
+  width: 100%;
+  max-width: 30rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.price-tag {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.9rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.price-tag strong {
+  font-size: 2.5rem;
+}
+.price-list {
+  min-height: 14rem;
+  padding: 0;
+  list-style: none;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.price-list li::before {
+  content: '';
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 1rem;
+  background: url(../img/prices/checked.svg) center no-repeat;
+  background-size: 100%;
+}
 .slick-active {
   outline: none;
 }
@@ -262,6 +328,23 @@ section {
   }
   .main-title {
     padding-bottom: 3rem;
+  }
+  .price-button {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .price-header-btn {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .price-block {
+    margin-top: 2rem;
+  }
+  .price-header-block {
+    margin-bottom: 0;
+  }
+  .section-header_light {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 767px) {

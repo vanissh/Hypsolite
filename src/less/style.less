@@ -95,9 +95,18 @@ section {
     padding: 10rem 0;
 }
 .section-header {
+    &_light {
+        color: @ligth;
+    }
+    h2 {
+       .bold();
+        font-size: 3.6rem; 
+    }
+    p {
+        font-size: 1.4rem;
+
+    }
     margin: 2rem 0 10rem;  
-    .bold();
-    font-size: 3.6rem;
     text-align: center;
 }
 
@@ -208,6 +217,67 @@ section {
         }
     }
 }
+
+/* Секция с ценами */
+.price {
+    background: url(../img/prices/prices-bg.png) center repeat;
+    background-size: cover;
+    &-header-btn {
+        margin-top: 1rem;
+    }
+    &-button {
+        text-align: right;
+    }
+    &-header-block{
+        margin-bottom: 9rem;
+    }
+    &-block {
+        background: @ligth;
+        text-align: center;
+        box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+        padding: 1rem 3rem;
+        min-height: 60rem;
+        color: @text;
+        h4 {
+            font-size: 1.9rem;
+            .bold();
+            margin: 3rem 0;
+        }
+        img {
+            width: 100%;
+            max-width: 30rem;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+    }
+    &-tag {
+        display: block;
+        margin-bottom: 2rem;
+        font-size: 1.9rem;
+        .bold();
+        strong {
+            font-size: 2.5rem;
+        }
+    }
+    &-list {
+        min-height: 14rem;
+        padding: 0;
+        list-style: none;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        li {
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1.4rem;
+                height: 1.4rem;
+                margin-right: 1rem;
+                background: url(../img/prices/checked.svg) center no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+}
 .slick-active {
     outline: none;
 }
@@ -277,6 +347,7 @@ section {
         text-align: center;
     }
 }
+
 @media (max-width: 991px) {
     .phone-link-wrap, .main-title {
         text-align: center;
@@ -290,6 +361,26 @@ section {
             padding-bottom: 3rem;
         }
     }
+    .price {
+        &-button {
+        text-align: center;
+        padding: 2rem 0;
+        }
+        &-header-btn {
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+        &-block {
+            margin-top: 2rem;
+        }
+        &-header-block {
+            margin-bottom: 0;
+        }
+    }
+    .section-header_light{
+        margin-bottom: 0;
+    }
+
 }
 @media (max-width: 767px) {
     .header, .wrap-block {
