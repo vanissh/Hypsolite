@@ -70,6 +70,39 @@ textarea:focus {
   line-height: 7rem;
   text-decoration: none;
 }
+.form {
+  background-color: #fff;
+  padding: 5rem 5rem 4rem 5rem;
+  text-align: center;
+}
+.form-header {
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+}
+.form-header strong {
+  font-size: 1.9rem;
+}
+.form-input {
+  display: block;
+  margin: 2rem 0;
+  border: 1px solid #dddddd;
+  width: 100%;
+  padding: 1.7rem;
+  border-radius: 5px;
+}
+.form label {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  background-color: #fff;
+}
+.form-btn {
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
 /* Typography */
 section {
   padding: 10rem 0;
@@ -122,39 +155,6 @@ section {
   text-align: center;
   margin-top: 3rem;
   font-size: 1rem;
-}
-.main-form {
-  background-color: #fff;
-  padding: 5rem 5rem 4rem 5rem;
-  text-align: center;
-}
-.main-form-header {
-  margin-bottom: 4rem;
-  font-size: 1.8rem;
-}
-.main-form-header strong {
-  font-size: 1.9rem;
-}
-.main-form-input {
-  display: block;
-  margin: 2rem 0;
-  border: 1px solid #dddddd;
-  width: 100%;
-  padding: 1.7rem;
-  border-radius: 5px;
-}
-.main-form label {
-  position: absolute;
-  transform: translateX(-50%) translateY(-50%);
-  padding: 0.5rem;
-  font-size: 1.3rem;
-  background-color: #fff;
-}
-.main-form-btn {
-  width: 100%;
-  height: 6rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
 }
 .main span {
   display: inline-block;
@@ -247,6 +247,92 @@ section {
   margin-right: 1rem;
   background: url(../img/prices/checked.svg) center no-repeat;
   background-size: 100%;
+}
+/* Секция с отзывами */
+.feedback {
+  background: url(../img/feedback/feedback-bg.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.feedback-form {
+  margin-top: 5rem;
+}
+.feedback-form-header {
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+.feedback-content {
+  margin-left: 2rem;
+}
+.feedback-slider {
+  background-color: #fff;
+  box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+  padding: 5rem 6rem;
+}
+.feedback-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  width: 4rem;
+  height: 5rem;
+  border: none;
+  background-color: #70c849;
+}
+.feedback-slider-btn img {
+  width: 50%;
+}
+.feedback p {
+  font-size: 1.6rem;
+}
+.feedback-prev-btn {
+  left: -4rem;
+}
+.feedback-next-btn {
+  right: -4rem;
+}
+.feedback-media {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+.feedback-media-avatar {
+  margin-right: 2rem;
+}
+.feedback-media-avatar img {
+  width: 4rem;
+  height: 4rem;
+}
+.feedback-media-name span {
+  font-size: 1.3rem;
+}
+.feedback-text {
+  position: relative;
+}
+.feedback-text::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -1.8rem;
+  left: 4rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: #fff;
+  border: 2px solid #70c849;
+  border-bottom: none;
+  border-top-right-radius: 90px;
+}
+.feedback-text p {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px solid #70c849;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+.feedback .hand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 25%;
 }
 .slick-active {
   outline: none;
@@ -355,7 +441,24 @@ section {
   .main-title {
     margin-top: 10rem;
   }
+  .main-title h1 {
+    font-size: 2.5rem;
+  }
   .main {
     background-position: top left;
+  }
+}
+@media (max-width: 1199px) {
+  .fotorama {
+    margin-bottom: 3rem;
+  }
+  .hand {
+    display: none;
+  }
+  .feedback-prev-btn {
+    left: 0;
+  }
+  .feedback-next-btn {
+    right: 0;
   }
 }

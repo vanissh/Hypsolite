@@ -3,8 +3,8 @@
 @icons-color: #70c849;
 @text: #292929;
 @danger: #ff0000;
-@bg-ligth: #f5f5f5;
-@ligth: #fff;
+@bg-light: #f5f5f5;
+@light: #fff;
 @border-input: #dddddd;
 
 /* Fonts */
@@ -69,7 +69,7 @@ button, input, a, textarea{
     padding: 1rem 2rem;
     border-radius: 8px;
     font-size: 1.2rem;
-    color: @ligth;
+    color: @light;
     text-transform: uppercase;
     border: none;
     transition: all 0.2s;
@@ -89,6 +89,40 @@ button, input, a, textarea{
     line-height: 7rem;
     text-decoration: none;
 }
+.form {
+    background-color: @light;
+    padding: 5rem 5rem 4rem 5rem;
+    text-align: center;
+    &-header {
+        margin-bottom: 4rem;
+        font-size: 1.8rem;
+        strong {
+            font-size: 1.9rem;
+        }
+    }
+    &-input {
+        display: block;
+        margin: 2rem 0;
+        border: 1px solid @border-input;
+        width: 100%;
+        padding: 1.7rem;
+        border-radius: 5px;
+    }
+    label {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        background-color: @light;
+    }
+    &-btn {
+        width: 100%;
+        height: 6rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
 
 /* Typography */
 section {
@@ -96,7 +130,7 @@ section {
 }
 .section-header {
     &_light {
-        color: @ligth;
+        color: @light;
     }
     h2 {
        .bold();
@@ -143,44 +177,11 @@ section {
         margin-top: 3rem;
         font-size: 1rem;
     }
-    &-form {
-        background-color: @ligth;
-        padding: 5rem 5rem 4rem 5rem;
-        text-align: center;
-        &-header {
-            margin-bottom: 4rem;
-            font-size: 1.8rem;
-            strong {
-                font-size: 1.9rem;
-            }
-        }
-        &-input {
-            display: block;
-            margin: 2rem 0;
-            border: 1px solid @border-input;
-            width: 100%;
-            padding: 1.7rem;
-            border-radius: 5px;
-        }
-        label {
-            position: absolute;
-            transform: translateX(-50%) translateY(-50%);
-            padding: 0.5rem;
-            font-size: 1.3rem;
-            background-color: @ligth;
-        }
-        &-btn {
-            width: 100%;
-            height: 6rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-    }
     /* Ярлык */
     span {
         display: inline-block;
         background: @icons-color;
-        color: @ligth;
+        color: @light;
         padding: 2rem 3.3rem;
         font-size: 1.8rem;
         margin-bottom: 3rem;
@@ -232,7 +233,7 @@ section {
         margin-bottom: 9rem;
     }
     &-block {
-        background: @ligth;
+        background: @light;
         text-align: center;
         box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
         padding: 1rem 3rem;
@@ -278,6 +279,95 @@ section {
         }
     }
 }
+
+/* Секция с отзывами */
+.feedback {
+    background: url(../img/feedback/feedback-bg.png) center no-repeat;
+    background-size: cover;
+    position: relative;
+    &-form {
+        margin-top: 5rem;
+        &-header {
+            .bold();
+        }
+    }
+    &-content{
+        margin-left: 2rem;
+    }
+    &-slider {
+        background-color: @light;
+        box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11);
+        padding: 5rem 6rem;
+        &-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+            width: 4rem;
+            height: 5rem;
+            border: none;
+            background-color: @icons-color;
+            img {
+                width: 50%;
+            }
+        }
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    &-prev-btn {
+        left: -4rem;
+    }
+    &-next-btn {
+        right: -4rem;
+    }
+    &-media {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5rem;
+        &-avatar {
+            margin-right: 2rem;
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        &-name {
+            span {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    &-text {
+        position: relative;
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -1.8rem;
+            left: 4rem;
+            height: 2rem;
+            width: 2rem;
+            background-color: @light;
+            border: 2px solid @icons-color;
+            border-bottom: none;
+            border-top-right-radius: 90px;
+        }
+        p {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 2px solid @icons-color;
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+    }
+    .hand {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 25%;
+    }
+}
 .slick-active {
     outline: none;
 }
@@ -318,7 +408,7 @@ section {
         left: 50%;
         top: 10%;
         transform: translateX(-50%);
-        background-color: @ligth;
+        background-color: @light;
         padding: 4rem 6rem;
     }
     &-form {
@@ -333,7 +423,7 @@ section {
         border: none;
         background: transparent;
         font-size: 4rem;
-        color:@ligth;
+        color:@light;
 
     }
     &-header {
@@ -388,8 +478,30 @@ section {
     }
     .main-title {
         margin-top: 10rem;
+        h1 {
+            font-size: 2.5rem;
+        }
     }
     .main {
         background-position: top left;
     }
+}
+
+@media (max-width: 1199px){
+    .fotorama {
+       margin-bottom: 3rem; 
+    }
+    .hand {
+        display: none;
+    }
+    .feedback {
+        &-prev-btn {
+            left: 0;
+        }
+        &-next-btn {
+            right: 0;
+        }
+
+    }
+    
 }
