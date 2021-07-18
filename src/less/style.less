@@ -1,7 +1,7 @@
 /* Colors */
 @btn-color: #f6ae01;
 @icons-color: #70c849;
-@icons-color-dark: #358b11;
+@icons-color-dark: #286b0a;
 @text: #292929;
 @danger: #ff0000;
 @bg-light: #f5f5f5;
@@ -538,7 +538,6 @@ section {
 }
 
 /* Материалы */
-
 .materials {
     background: url(../img/materials/bg-materials.png) center repeat;
     background-size: cover;
@@ -567,6 +566,101 @@ section {
         }
     }
 
+}
+
+/* Посмотрите как мы работаем */
+.tour {
+    background: url(../img/tour/bg-tour.png) center no-repeat;
+    background-size: cover;
+    background-position: 60% 0;
+    &-text {
+        h2 {
+            font-size: 4rem;
+            .bold();
+            text-transform: uppercase;
+            line-height: 1.45;
+            margin-bottom: 3rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+/* Дополнительные услуги */
+.add-services {
+    background: url(../img/add-services/bg-add.png) center repeat;
+    background-size: cover;
+    .section-header {
+        margin-bottom: 7rem;
+    }
+    &-block {
+        text-align: center;
+        color: @light;
+        p {
+            font-size: 1.4rem;
+            .bold();
+            padding: 3rem 0 2rem;
+        }
+        button {
+            padding: 1rem 4rem;
+        }
+    }
+    
+}
+
+/* Контакты */
+.contacts {
+    background: url(../img/contacts/bg-contacts.png) center repeat;
+    background-size: cover;
+    background-position: 60% 0;
+    &-block {
+        h2 {
+            font-size: 3.6rem;
+            .bold();
+            margin-bottom: 6rem;
+        }
+        p{
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            a{
+                font-size: 1.4rem;
+                color: @text;
+            }
+        }
+    }
+    &-phone {
+        margin-top: 3rem;
+    }
+}
+
+footer {
+    .logo {
+        margin: 3rem 0;
+        height: 9rem;
+        display: flex;
+        align-items:center;
+    }
+    .footer-wrap {
+        margin: 3rem 0;
+        text-align: center;
+        h4{
+            margin-bottom: 3rem;
+            .bold();
+        }
+        p {
+            font-size: 1.4rem;
+            text-decoration: underline;
+            a {
+                font-size: 1.4rem;
+                color: @text; 
+            }
+        }
+    }
+    .wrap {
+        margin: 3rem 0;
+        font-size: 1.2rem;
+    }
 }
 /* Оформление модальных окон */
 .popup {
@@ -612,6 +706,39 @@ section {
     }
     &-content {
         text-align: center;
+    }
+}
+@media (max-width: 1199px){
+    .fotorama {
+       margin-bottom: 3rem; 
+    }
+    .hand {
+        display: none;
+    }
+    .feedback {
+        &-prev-btn {
+            left: 0;
+        }
+        &-next-btn {
+            right: 0;
+        }
+    }
+    .problems {
+        &-list {
+            ul li {
+                min-height: 5.4rem;
+                &::before {
+                    transform: translateY(-110%);
+                }
+            }
+        }
+    }
+    .add-services {
+        &-block {
+            img {
+                width: 30rem;
+            }
+        }
     }
 }
 
@@ -676,7 +803,22 @@ section {
             margin-top: 3rem;
         }
     }
-
+    .tour {
+        background-position: 30% 0;
+        &-text {
+            text-align: center;
+        }
+    }
+    .add-services {
+        &-block {
+            img {
+                width: 23rem;
+            }
+        }
+    }
+    .contacts {
+        background-position: 10%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -699,31 +841,36 @@ section {
             }
         }
     }
-}
-
-@media (max-width: 1199px){
-    .fotorama {
-       margin-bottom: 3rem; 
+    .tour {
+        background-position: 30% 0;
     }
-    .hand {
-        display: none;
-    }
-    .feedback {
-        &-prev-btn {
-            left: 0;
+    .add-services {
+        .section-header {
+            margin-bottom: 0;
         }
-        &-next-btn {
-            right: 0;
-        }
-    }
-    .problems {
-        &-list {
-            ul li {
-                min-height: 5.4rem;
-                &::before {
-                    transform: translateY(-110%);
-                }
+        &-block {
+            img {
+                margin-top: 3rem;
+                width: 32rem;
             }
+            p {
+                padding: 2rem 0 1rem;
+            }
+        }
+    }
+    footer {
+        .logo {
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .footer-wrap {
+            h4 {
+                margin-bottom: 0;
+            }
+            margin: 2rem 0;
+        }
+        .wrap {
+            margin: 2rem 0;
         }
     }
 }
@@ -744,6 +891,18 @@ section {
         &-block {
             margin-top: auto;
             min-height: 8rem;
+        }
+    }
+    .add-services {
+        &-block {
+            img {
+                width: 27rem;
+            }
+        }
+    }
+    .contacts {
+        &-block {
+            margin-left: 3rem;
         }
     }
 }

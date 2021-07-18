@@ -388,13 +388,13 @@ section {
   margin-bottom: 0;
 }
 .all-inclusive .section-header_active h2 {
-  color: #358b11;
+  color: #286b0a;
 }
 .all-inclusive .circle {
   position: relative;
   width: 5rem;
   height: 5rem;
-  background: #358b11;
+  background: #286b0a;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
@@ -408,7 +408,7 @@ section {
   right: 1rem;
   width: 4.5rem;
   height: 4.5rem;
-  background: #358b11;
+  background: #286b0a;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 45px;
@@ -484,7 +484,7 @@ section {
   background-size: 50%;
 }
 .problems-list_sol {
-  border-color: #358b11;
+  border-color: #286b0a;
 }
 .problems-list_sol ul li::before {
   background: url(../img/problems/checked.svg) center no-repeat;
@@ -524,6 +524,90 @@ section {
   padding: 2rem 0;
 }
 .materials-block a {
+  font-size: 1.2rem;
+}
+/* Посмотрите как мы работаем */
+.tour {
+  background: url(../img/tour/bg-tour.png) center no-repeat;
+  background-size: cover;
+  background-position: 60% 0;
+}
+.tour-text h2 {
+  font-size: 4rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.45;
+  margin-bottom: 3rem;
+}
+.tour-text p {
+  font-size: 2rem;
+}
+/* Дополнительные услуги */
+.add-services {
+  background: url(../img/add-services/bg-add.png) center repeat;
+  background-size: cover;
+}
+.add-services .section-header {
+  margin-bottom: 7rem;
+}
+.add-services-block {
+  text-align: center;
+  color: #fff;
+}
+.add-services-block p {
+  font-size: 1.4rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  padding: 3rem 0 2rem;
+}
+.add-services-block button {
+  padding: 1rem 4rem;
+}
+/* Контакты */
+.contacts {
+  background: url(../img/contacts/bg-contacts.png) center repeat;
+  background-size: cover;
+  background-position: 60% 0;
+}
+.contacts-block h2 {
+  font-size: 3.6rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  margin-bottom: 6rem;
+}
+.contacts-block p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+.contacts-block p a {
+  font-size: 1.4rem;
+  color: #292929;
+}
+.contacts-phone {
+  margin-top: 3rem;
+}
+footer .logo {
+  margin: 3rem 0;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+}
+footer .footer-wrap {
+  margin: 3rem 0;
+  text-align: center;
+}
+footer .footer-wrap h4 {
+  margin-bottom: 3rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+}
+footer .footer-wrap p {
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+footer .footer-wrap p a {
+  font-size: 1.4rem;
+  color: #292929;
+}
+footer .wrap {
+  margin: 3rem 0;
   font-size: 1.2rem;
 }
 /* Оформление модальных окон */
@@ -570,6 +654,29 @@ section {
 }
 .popup-content {
   text-align: center;
+}
+@media (max-width: 1199px) {
+  .fotorama {
+    margin-bottom: 3rem;
+  }
+  .hand {
+    display: none;
+  }
+  .feedback-prev-btn {
+    left: 0;
+  }
+  .feedback-next-btn {
+    right: 0;
+  }
+  .problems-list ul li {
+    min-height: 5.4rem;
+  }
+  .problems-list ul li::before {
+    transform: translateY(-110%);
+  }
+  .add-services-block img {
+    width: 30rem;
+  }
 }
 @media (max-width: 991px) {
   .phone-link-wrap,
@@ -623,6 +730,18 @@ section {
   .materials-block {
     margin-top: 3rem;
   }
+  .tour {
+    background-position: 30% 0;
+  }
+  .tour-text {
+    text-align: center;
+  }
+  .add-services-block img {
+    width: 23rem;
+  }
+  .contacts {
+    background-position: 10%;
+  }
 }
 @media (max-width: 767px) {
   .header,
@@ -641,25 +760,31 @@ section {
   .problems-list ul li {
     margin-bottom: 0;
   }
-}
-@media (max-width: 1199px) {
-  .fotorama {
-    margin-bottom: 3rem;
+  .tour {
+    background-position: 30% 0;
   }
-  .hand {
-    display: none;
+  .add-services .section-header {
+    margin-bottom: 0;
   }
-  .feedback-prev-btn {
-    left: 0;
+  .add-services-block img {
+    margin-top: 3rem;
+    width: 32rem;
   }
-  .feedback-next-btn {
-    right: 0;
+  .add-services-block p {
+    padding: 2rem 0 1rem;
   }
-  .problems-list ul li {
-    min-height: 5.4rem;
+  footer .logo {
+    justify-content: center;
+    margin: 2rem 0;
   }
-  .problems-list ul li::before {
-    transform: translateY(-110%);
+  footer .footer-wrap {
+    margin: 2rem 0;
+  }
+  footer .footer-wrap h4 {
+    margin-bottom: 0;
+  }
+  footer .wrap {
+    margin: 2rem 0;
   }
 }
 @media (max-width: 575px) {
@@ -675,6 +800,12 @@ section {
   .all-inclusive-block {
     margin-top: auto;
     min-height: 8rem;
+  }
+  .add-services-block img {
+    width: 27rem;
+  }
+  .contacts-block {
+    margin-left: 3rem;
   }
 }
 @media (max-width: 501px) {
