@@ -1,0 +1,22 @@
+{
+  "name": "prj1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanissh/Hypsolite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanissh/Hypsolite/issues"
+  },
+  "homepage": "https://github.com/vanissh/Hypsolite#readme",
+  "dependencies": {
+    "less": "^4.1.1"
+  }
+}
