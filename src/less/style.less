@@ -1,6 +1,7 @@
 /* Colors */
 @btn-color: #f6ae01;
 @icons-color: #70c849;
+@icons-color-dark: #358b11;
 @text: #292929;
 @danger: #ff0000;
 @bg-light: #f5f5f5;
@@ -138,9 +139,9 @@ section {
     }
     p {
         font-size: 1.4rem;
-
+        margin-top: 4rem;
     }
-    margin: 2rem 0 10rem;  
+    margin: 0 0 10rem;  
     text-align: center;
 }
 
@@ -391,6 +392,84 @@ section {
     background-size: 70%;
 }
 
+.scheme {
+    position: relative;
+    .section-header {
+        margin-bottom: 7rem;
+    }
+    &-block {
+        min-height: 25rem;
+        margin-bottom: 7rem;
+        h3 {
+            .bold();
+            font-size: 2rem;
+            margin: 3rem 0 2rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+    .scheme-hand {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 35%;
+    }
+}
+
+.all-inclusive {
+    background-color: @bg-light;
+    .section-header_active {
+        margin-bottom: 0;
+        h2 {
+            color: @icons-color-dark;
+        }
+    }
+    .circle {
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        background: @icons-color-dark;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        &-center {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            right: 1rem;
+            width: 4.5rem;
+            height: 4.5rem;
+            background: @icons-color-dark;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 45px;
+            border: 2px solid @light;
+            transform: translateY(5%)translateX(17%);
+            color: @light;
+            font-size: 2rem;
+            p {
+                margin: auto;
+            }
+        }
+    }
+    &-block {
+        display: flex;
+        flex-direction: row;
+        margin-top: 9rem;
+    }
+    &-text {
+        h4 {
+          .bold();  
+        }
+        margin-left: 2rem;
+        margin-top: 5%;
+    }
+
+}
 /* Оформление модальных окон */
 .popup {
     position: fixed;
@@ -470,6 +549,17 @@ section {
     .section-header_light{
         margin-bottom: 0;
     }
+    .scheme {
+        &-hand {
+            display: none;
+        }
+        &-block {
+            text-align: center;
+            h3 {
+                min-height: 6rem;
+            }
+        }
+    }
 
 }
 @media (max-width: 767px) {
@@ -503,5 +593,23 @@ section {
         }
 
     }
-    
+}
+@media (max-width: 575px){
+    .scheme-block {
+        margin-bottom: 2rem;
+        h3 {
+            min-height: auto;
+        }
+    }
+    .all-inclusive {
+        .section-header {
+            p {
+                margin-bottom: 5rem;
+            }
+        }
+        &-block {
+            margin-top: auto;
+            min-height: 8rem;
+        }
+    }
 }

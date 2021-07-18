@@ -108,7 +108,7 @@ section {
   padding: 10rem 0;
 }
 .section-header {
-  margin: 2rem 0 10rem;
+  margin: 0 0 10rem;
   text-align: center;
 }
 .section-header_light {
@@ -120,6 +120,7 @@ section {
 }
 .section-header p {
   font-size: 1.4rem;
+  margin-top: 4rem;
 }
 .main {
   padding: 3rem 0;
@@ -356,6 +357,81 @@ section {
   background: url(../img/right-arrow.svg) center no-repeat;
   background-size: 70%;
 }
+.scheme {
+  position: relative;
+}
+.scheme .section-header {
+  margin-bottom: 7rem;
+}
+.scheme-block {
+  min-height: 25rem;
+  margin-bottom: 7rem;
+}
+.scheme-block h3 {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 2rem;
+  margin: 3rem 0 2rem;
+}
+.scheme-block p {
+  font-size: 1.4rem;
+}
+.scheme .scheme-hand {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 35%;
+}
+.all-inclusive {
+  background-color: #f5f5f5;
+}
+.all-inclusive .section-header_active {
+  margin-bottom: 0;
+}
+.all-inclusive .section-header_active h2 {
+  color: #358b11;
+}
+.all-inclusive .circle {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  background: #358b11;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.all-inclusive .circle-center {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  right: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #358b11;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 45px;
+  border: 2px solid #fff;
+  transform: translateY(5%) translateX(17%);
+  color: #fff;
+  font-size: 2rem;
+}
+.all-inclusive .circle-center p {
+  margin: auto;
+}
+.all-inclusive-block {
+  display: flex;
+  flex-direction: row;
+  margin-top: 9rem;
+}
+.all-inclusive-text {
+  margin-left: 2rem;
+  margin-top: 5%;
+}
+.all-inclusive-text h4 {
+  font-family: 'ProximaNova_bold', sans-serif;
+}
 /* Оформление модальных окон */
 .popup {
   position: fixed;
@@ -432,6 +508,15 @@ section {
   .section-header_light {
     margin-bottom: 0;
   }
+  .scheme-hand {
+    display: none;
+  }
+  .scheme-block {
+    text-align: center;
+  }
+  .scheme-block h3 {
+    min-height: 6rem;
+  }
 }
 @media (max-width: 767px) {
   .header,
@@ -460,5 +545,20 @@ section {
   }
   .feedback-next-btn {
     right: 0;
+  }
+}
+@media (max-width: 575px) {
+  .scheme-block {
+    margin-bottom: 2rem;
+  }
+  .scheme-block h3 {
+    min-height: auto;
+  }
+  .all-inclusive .section-header p {
+    margin-bottom: 5rem;
+  }
+  .all-inclusive-block {
+    margin-top: auto;
+    min-height: 8rem;
   }
 }
