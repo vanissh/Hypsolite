@@ -497,6 +497,35 @@ section {
   transform: translateX(40%);
   height: 70%;
 }
+/* Материалы */
+.materials {
+  background: url(../img/materials/bg-materials.png) center repeat;
+  background-size: cover;
+  text-align: center;
+}
+.materials p {
+  font-size: 1.4rem;
+}
+.materials a {
+  color: #70c849;
+}
+.materials-link {
+  margin-top: 8rem;
+}
+.materials-block {
+  text-align: center;
+}
+.materials-block p {
+  min-height: 3.6rem;
+}
+.materials-block h4 {
+  font-size: 1.7rem;
+  font-family: 'ProximaNova_bold', sans-serif;
+  padding: 2rem 0;
+}
+.materials-block a {
+  font-size: 1.2rem;
+}
 /* Оформление модальных окон */
 .popup {
   position: fixed;
@@ -587,6 +616,12 @@ section {
   }
   .problems-list h4 {
     min-height: 5.1rem;
+  }
+  .materials .section-header {
+    margin-bottom: 0;
+  }
+  .materials-block {
+    margin-top: 3rem;
   }
 }
 @media (max-width: 767px) {

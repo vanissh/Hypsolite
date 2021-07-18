@@ -196,7 +196,6 @@ section {
 }
 
 /* Секция с преимуществами */
-
 .features {
     &-block {
         text-align: center;
@@ -537,6 +536,38 @@ section {
         height: 70%;
     }
 }
+
+/* Материалы */
+
+.materials {
+    background: url(../img/materials/bg-materials.png) center repeat;
+    background-size: cover;
+    text-align: center;
+    p {
+        font-size: 1.4rem;
+    }
+    a {
+        color: @icons-color;
+    }
+    &-link {
+        margin-top: 8rem;
+    }
+    &-block {
+        text-align: center;
+        p {
+         min-height: 3.6rem;   
+        }
+        h4{
+            font-size: 1.7rem;
+            .bold();
+            padding: 2rem 0;
+        }
+        a {
+            font-size: 1.2rem;
+        }
+    }
+
+}
 /* Оформление модальных окон */
 .popup {
     position: fixed;
@@ -637,8 +668,17 @@ section {
             }
         }
     }
+    .materials {
+        .section-header {
+            margin-bottom: 0;
+        }
+        &-block {
+            margin-top: 3rem;
+        }
+    }
 
 }
+
 @media (max-width: 767px) {
     .header, .wrap-block {
         text-align: center;
@@ -687,6 +727,7 @@ section {
         }
     }
 }
+
 @media (max-width: 575px){
     .scheme-block {
         margin-bottom: 2rem;
@@ -706,6 +747,7 @@ section {
         }
     }
 }
+
 @media (max-width: 501px) {
     .problems {
         &-list {
